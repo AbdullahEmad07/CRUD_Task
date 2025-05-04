@@ -1,0 +1,16 @@
+.icon{
+    width: 20%;
+    cursor: pointer;
+}
+.empData{
+    width: 90%;
+}
+.dataCell{
+    width: 20%;
+}
+.iconDiv{
+    width: 10%;
+}
+.cardColor{
+    background-color: rgb(238, 244, 219);
+}

@@ -1,0 +1,14 @@
+<div class="border-1 solid border-black border container rounded-5 d-flex my-2 cardColor">
+    <div class="d-flex flex-wrap my-2 empData text-center">
+        <div class="dataCell">{{employee.id}}</div>
+        <div class="dataCell">{{employee.firstName}}</div>
+        <div class="dataCell">{{employee.lastName}}</div>
+        <div class="dataCell">{{employee.email}}</div>
+        <div class="dataCell">{{employee.position}}</div>
+    </div>
+    <div class="d-flex justify-content-evenly  iconDiv">
+        <img class="icon " src="../../../assets/icons/edit.svg" alt=""(click)="editEmployee(employee.id)">
+        <img class="icon " src="../../../assets/icons/delete.svg" alt=""(click)="onDelete(employee.id)">
+    </div>
+    
+</div>

@@ -1,0 +1,25 @@
+<div class="w-100 d-flex flex-column align-items-center">
+    <h1>Edit Employee</h1>
+    <form action="" class="w-50 gap-2 d-flex flex-column align-items-center" [formGroup]="editForm">
+        <input class="form-control" type="text"formControlName="id" >
+        <input class="form-control" type="text" formControlName="firstName" placeholder="First Name">
+        
+        <p class="text-danger text-center m-0" *ngIf="editForm.get('firstName')?.getError('required') && editForm.get('firstName')?.touched">this field is required</p>
+        <p class="text-danger m-0" *ngIf="editForm.get('firstName')?.getError('minlength')">min length is 3</p>
+        <p class="text-danger m-0" *ngIf="editForm.get('firstName')?.getError('maxlength')">max length is 16</p>
+        
+        
+        <input class="form-control" type="text" formControlName="lastName" placeholder="Last Name">
+        <p class="text-danger text-center m-0" *ngIf="editForm.get('lastName')?.getError('required') && editForm.get('lastName')?.touched">this field is required</p>
+        <p class="text-danger m-0" *ngIf="editForm.get('lastName')?.getError('minlength')">min length is 3</p>
+        <p class="text-danger m-0" *ngIf="editForm.get('lastName')?.getError('maxlength')">max length is 16</p>
+        <input class="form-control" type="text" formControlName="email" placeholder="Email">
+        <p class="text-danger m-0" *ngIf="editForm.get('email')?.getError('required') && editForm.get('email')?.touched">this field is required</p> 
+        <p class="text-danger m-0" *ngIf="editForm.get('email')?.getError('email')">please enter correct email</p>
+        <input class="form-control" type="text" formControlName="position" placeholder="Position">
+        <p class="text-danger text-center m-0" *ngIf="editForm.get('position')?.getError('required') && editForm.get('position')?.touched">this field is required</p>
+        <p class="text-danger m-0" *ngIf="editForm.get('position')?.getError('minlength')">min length is 2</p>
+        <button class="btn btn-outline-success" (click)="onUpdate()">Update</button>
+    </form>
+    <button class="btn btn-outline-primary mt-3"routerLink="" >Back to home</button>
+</div>
